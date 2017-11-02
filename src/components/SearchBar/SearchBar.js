@@ -7,6 +7,7 @@ const sortByOptions= {
   "Most Reviewed": 'review_count'
 };
 
+<<<<<<< HEAD
 class SearchBar extends React.Component {
   constructor(props){
     super(props);
@@ -58,5 +59,35 @@ class SearchBar extends React.Component {
   } // end render method
 
 }; // enb of SearchBar component
+=======
+class SearchBar extends React.Component{
+   renderSortByOptions(){
+    return Object.keys(sortByOptions).map(sortByOption => {
+      let sortByOptionValue = sortByOptions[sortByOption];
+      return <li key = {sortByOptionValue}> {sortByOption}</li>
+    });
+  }
+  render(){
+    return (
+      <div className="SearchBar">
+      <div className="SearchBar-sort-options">
+      <ul>
+      {this.renderSortByOptions()}  // This is probably wrong. I'm supposed to call the method and I'm assuming it retuns li items to poplate the ul
+      </ul>
+      </div>
+      <div className="SearchBar-fields">
+      <input placeholder="Search Businesses" />
+      <input placeholder="Where?" />
+      </div>
+      <div className="SearchBar-submit">
+      <a>Lets Go</a>
+      </div>
+      </div>
+
+    )
+  }
+};
+
+>>>>>>> c9d54cce5fd128e59fc8cd3aac537683e5473f92
 
 export default SearchBar;
