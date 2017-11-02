@@ -2,8 +2,6 @@
 
 html {
   font-size: 18px;
-<<<<<<< HEAD
-=======
 }
 
 @media only screen and (max-width: 560px) {
@@ -44,56 +42,3 @@ h1 {
   font-size: 1.8rem;
   color: #fff;
 }
-
-
-/* ORIGINAL CSS FROM CREATE-REACT-APP */
-/*.App {
-  text-align: center;
->>>>>>> c9d54cce5fd128e59fc8cd3aac537683e5473f92
-}
-
-@media only screen and (max-width: 560px) {
-  html {
-    font-size: 15px;
-  }
-}
-
-input:focus {
-  outline: none;
-}
-
-/* Reusable Component - Image Container */
-
-.image-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  overflow: hidden;
-  background: #000;
-}
-
-.image-container img {
-  width: 100%;
-}
-
-<<<<<<< HEAD
-/* App Styles */
-
-.App {
-  font-family: 'Work Sans', sans-serif;
-}
-
-h1 {
-  padding: .66rem 0;
-  text-align: center;
-  background-color: #cca353;
-  font-family: Poppins, sans-serif;
-  font-size: 1.8rem;
-  color: #fff;
-}
-=======
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}*/
->>>>>>> c9d54cce5fd128e59fc8cd3aac537683e5473f92
