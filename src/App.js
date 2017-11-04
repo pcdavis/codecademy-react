@@ -28,15 +28,19 @@ const businesses = [
       console.log(businesses);
 
 class App extends React.Component {
-  searchYelp(term,location,sortBy){
-console.log(`search yelp for {term} {locations} {sortBy}`)
+
+  mysearchYelp(term,location,sortBy){
+    console.log("search for "+ term);
+    console.log(term);
+    console.log(location);
+    console.log(sortBy);
   }
 
   render() {
     return (
       <div className="App">
             <h1>ravenous</h1>
-            <SearchBar />
+            <SearchBar searchYelp={this.mysearchYelp} />
             <BusinessList businesses = {businesses} />
       </div>
     );

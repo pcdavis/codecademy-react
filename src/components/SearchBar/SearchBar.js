@@ -12,11 +12,12 @@ class SearchBar extends React.Component {
     super(props);
     this.state = {
                   term: '',
-                  locations: '',
+                  location: '',
                   sortBy: 'best_match'
                 };
     this.handleTermChange = this.handleTermChange.bind(this);
     this.handleLocationChange = this.handleLocationChange.bind(this);
+    this.handleSearch=this.handleSearch.bind(this);
   };
 
 
@@ -34,10 +35,17 @@ class SearchBar extends React.Component {
 
   handleTermChange(event){
     this.setState({term: event.target.value})
+    console.log(this.state.term)
   }
 
   handleLocationChange(event){
-    this.setState({locations: event.target.value})
+    this.setState({location: event.target.value})
+    console.log(this.state.location)
+  }
+
+  handleSearch(event){
+    this.props.searchYelp(this.state.term,this.state.location,this.state.sortBy);
+    event.preventDefault(); // prevents the default action that happens when a link is clicked
   }
 
   renderSortByOptions(){
@@ -59,8 +67,8 @@ class SearchBar extends React.Component {
               <input onChange = {this.handleTermChange} placeholder="Search Businesses" />
               <input onChange = {this.handleLocationChange} placeholder="Where?" />
             </div>
-          <div className="SearchBar-submit">
-            <a>Lets Go</a>
+          <div  className="SearchBar-submit">
+            <a onClick={this.handleSearch}>Lets Go</a>
           </div>
         </div> //End main div
     ); //end of return statement
