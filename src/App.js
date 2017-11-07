@@ -40,7 +40,7 @@ class App extends React.Component {
     return (
       <div className="App">
             <h1>ravenous</h1>
-            <SearchBar searchYelp={this.mysearchYelp} />
+            <SearchBar searchYelpProp={this.mysearchYelp} />
             <BusinessList businesses = {businesses} />
       </div>
     );
